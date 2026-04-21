@@ -1,5 +1,5 @@
-import Home from "./pages/Home"
-
+import Home from "./pages/Home.tsx"
+import Dashboard from "./pages/Dashboard.tsx"
 
 function App() {
 
@@ -7,8 +7,10 @@ function App() {
     <div>
       <h1>Sunbanks Tool</h1>
     </div>
-    <Home />
+  
   )
+  return <Home/>
+  return <Dashboard/>
 }
 
 
