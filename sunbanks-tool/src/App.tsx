@@ -5,13 +5,13 @@ function App() {
 
   return (
     <div>
-      <h1>Sunbanks Tool</h1>
+    <h1>Sunbanks Tool</h1>
+    <Home/>
+    <Dashboard/>
     </div>
-  
   )
-  return <Home/>
-  return <Dashboard/>
+
 }
 
 
-export default App
+export default App 
