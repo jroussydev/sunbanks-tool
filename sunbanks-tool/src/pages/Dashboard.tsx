@@ -1,6 +1,8 @@
+import { useState } from "react"
+
 const Dashboard = () => 
     {
-        const projects = ["project 1","Project 2"]
+        const [projects, setProjects] = useState(["project 1","Project 2"])
     
         return (
             <div>
