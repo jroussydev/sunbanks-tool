@@ -1,28 +1,24 @@
-const express = require ("express")
+const express = require("express")
+const cors = require("cors")
 const { Pool } = require("pg")
 
 const app = express()
 
+app.use(cors()) // 👈 IMPORTANT
+
 const pool = new Pool({
-    user: "postgres",
-    host: "localhost",
-    database: "portfolio",
-    password: "postgres",
-    port: 5432,
+  user: "postgres",
+  host: "localhost",
+  database: "portfolio",
+  password: "postgres",
+  port: 5432,
 })
 
-app.get("/projects", async (req, res) =>
-{
-    try {
-        const result = await
-        pool.query("SELECT * FROM projects")
-        res.json(result.rows)
-    } catch (error) {
-        console.error(error)
-        res.status(500).send("erreur serveur")
-    }
+app.get("/projects", async (req, res) => {
+  const result = await pool.query("SELECT * FROM projects")
+  res.json(result.rows)
 })
 
 app.listen(3001, () => {
-    console.log("server running on port 3001")
+  console.log("server running on 3001")
 })

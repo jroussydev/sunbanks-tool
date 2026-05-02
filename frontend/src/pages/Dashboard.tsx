@@ -1,51 +1,52 @@
+// 1. TYPES (description des données)
+type Project = {
+  id: number
+  name: string
+  github_url: string
+  live_url: string
+  stack: string[]
+}
+
+// 2. IMPORTS
 import { useEffect, useState } from "react"
 
-const Dashboard = () => {
-  const [projects, setProjects] = useState<string[]>(() => {
-    const storedProjects = localStorage.getItem("projects")
-    return storedProjects ? JSON.parse(storedProjects) : ["project 1", "project 2"]
-  })
+// 3. COMPOSANT
+export default function Dashboard() {
 
-  const [newProject, setNewProject] = useState("")
+  // 4. STATE
+  const [projects, setProjects] = useState<Project[]>([])
 
-  useEffect(() => {
-    localStorage.setItem("projects", JSON.stringify(projects))
-  }, [projects])
-
-  const handleAddProject = () => {
-    if (newProject.trim() === "") return
-
-    setProjects([...projects, newProject])
-    setNewProject("")
-  }
-//3.suppression de projects
-const handleDeleteProject = (projectToDelete: string) => {
-    const updatedProjects = projects.filter((project) => project != projectToDelete)
-    setProjects(updatedProjects)
-}
+  // 5. CHARGEMENT API
+  //useEffect(() => {
+   // fetch("http://localhost:3001/projects")
+    //  .then(res => res.json())
+    //  .then(data => setProjects(data))
+ // }, [])
+useEffect(() => {
+  fetch("http://localhost:3001/projects")
+    .then(res => {
+      console.log("STATUS:", res.status)
+      return res.json()
+    })
+    .then(data => {
+      console.log("DATA REÇUE:", data)
+      setProjects(data)
+    })
+    .catch(err => console.log("ERREUR FETCH:", err))
+}, [])
+  // 6. AFFICHAGE
   return (
     <div>
       <h1>Dashboard</h1>
 
-      <input
-        type="text"
-        value={newProject}
-        onChange={(e) => setNewProject(e.target.value)}
-        placeholder="Add a project"
-      />
-
-      <button onClick={handleAddProject}>Add</button>
-
       {projects.map((project) => (
-        <div key={project}>
-            {project}
-            <button onClick={() => handleDeleteProject(project)}>
-                supprimer
-            </button>
+        <div key={project.id}>
+          <h3>{project.name}</h3>
+          <p>{project.github_url}</p>
+          <p>{project.live_url}</p>
         </div>
       ))}
     </div>
   )
-}
 
-export default Dashboard
+}
