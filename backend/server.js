@@ -15,7 +15,7 @@ app.get("/projects", async (req, res) =>
 {
     try {
         const result = await
-        pool.query("SELECT * FROM project")
+        pool.query("SELECT * FROM projects")
         res.json(result.rows)
     } catch (error) {
         console.error(error)
