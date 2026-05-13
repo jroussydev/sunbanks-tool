@@ -50,10 +50,56 @@ const handleDeleteProject = (id: number) => {
   })
   }
 
-  //CREATE FORM
-  const handleCreateProject = (event: React.FormEvent<HTMLFormElement>) => {
+  //UPDATE FORM
+  const [editingId, setEditingId] = useState<number | null>(null)
+
+function startEdit(project: Project) {
+  setEditingId(project.id)
+  setName(project.name)
+  setGithubUrl(project.github_url)
+  setLiveUrl(project.live_url)
+  setStack(project.stack.join(", "))
+}
+
+  async function updateProject(id: number) {
+  const updatedProject = {
+    name,
+    github_url: githubUrl,
+    live_url: liveUrl,
+    stack: stack.split(",").map(item => item.trim())
+  }
+
+  const response = await fetch(`http://localhost:3001/projects/${id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(updatedProject)
+  })
+
+  const data = await response.json()
+
+  setProjects(projects.map(project =>
+    project.id === id ? data : project
+  ))
+
+  setEditingId(null)
+  setName("")
+  setGithubUrl("")
+  setLiveUrl("")
+  setStack("")
+}
+function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
   event.preventDefault()
 
+  if (editingId !== null) {
+    updateProject(editingId)
+  } else {
+    handleCreateProject()
+  }
+}
+// CREATE FORM
+const handleCreateProject = () => {
   fetch("http://localhost:3001/projects", {
     method: "POST",
     headers: {
@@ -79,7 +125,7 @@ const handleDeleteProject = (id: number) => {
   return (
     <div>
       <h1>Dashboard</h1>
-      <form onSubmit={handleCreateProject}>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Project name"
@@ -107,16 +153,21 @@ const handleDeleteProject = (id: number) => {
           onChange={(event) => setStack(event.target.value)}
         />
 
-        <button type="submit">Create project</button>
+        <button type="submit">
+  {editingId !== null ? "Mettre à jour" : "Create project"}
+</button>
       </form>
       {projects.map((project) => (
         <div key={project.id}>
           <h3>{project.name}</h3>
           <p>{project.github_url}</p>
           <p>{project.live_url}</p>
-          <p>{project.stack}</p>
+          <p>{project.stack.join(", ")}</p>
           <button onClick={() => handleDeleteProject(project.id)}>
   Delete
+</button>
+<button onClick={() => startEdit(project)}>
+  Modifier
 </button>
         </div>
       ))}
