@@ -11,16 +11,18 @@ import Dashboard from "./pages/admin/Dashboard.tsx"
 
 function App() {
   return (
-    <>
-    <Header />
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/services" element={<Services />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/dashboard" element={<Dashboard />} />
-    </Routes>
-    <Footer />
-    </>
+    <div className="min-h-screen bg-slate-100 text-slate-800">
+      <Header />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Routes>
+
+      <Footer />
+    </div>
   )
 }
 
