@@ -1,8 +1,21 @@
 import { Link } from "react-router-dom"
 
+import Hero from "../../components/home/Hero"
+import ServicesPreview from "../../components/home/ServicesPreview"
+import ProjectsPreview from "../../components/home/ProjectsPreview"
+import PortfolioPreview from "../../components/home/PortfolioPreview"
+import ContactCTA from "../../components/home/ContactCTA"
+
 export default function Home() {
     return (
         <main>
+            <Hero />
+            <ServicesPreview />
+            <ProjectsPreview />
+            <PortfolioPreview />
+            <ContactCTA />
+
+
             <section>
                 <img src="/public/logo.png" alt="Logo Jess Tech" />
                 <h1>Jess Tech</h1>
