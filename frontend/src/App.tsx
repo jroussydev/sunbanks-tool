@@ -2,11 +2,12 @@ import { Routes, Route } from "react-router-dom"
 
 import Header from "./components/Header.tsx"
 import Footer from "./components/Footer.tsx"
-import Services from "./pages/public/Services.tsx"
-import Contact from "./pages/public/Contact.tsx"
-import Realisations from "./pages/public/Realisations.tsx"
 
 import Home from "./pages/public/Home.tsx"
+import Services from "./pages/public/Services.tsx"
+import Realisations from "./pages/public/Realisations.tsx"
+import Contact from "./pages/public/Contact.tsx"
+
 import Dashboard from "./pages/admin/Dashboard.tsx"
 
 function App() {
