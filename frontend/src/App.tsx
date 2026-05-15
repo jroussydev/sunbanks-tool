@@ -2,6 +2,8 @@ import { Routes, Route } from "react-router-dom"
 
 import Header from "./components/Header.tsx"
 import Footer from "./components/Footer.tsx"
+import Services from "./pages/public/Services.tsx"
+import Contact from "./pages/public/Contact.tsx"
 
 
 import Home from "./pages/public/Home.tsx"
@@ -13,6 +15,8 @@ function App() {
     <Header />
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/services" element={<Services />} />
+      <Route path="/contact" element={<Contact />} />
       <Route path="/dashboard" element={<Dashboard />} />
     </Routes>
     <Footer />
