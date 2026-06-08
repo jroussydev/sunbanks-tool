@@ -2,16 +2,22 @@ import Navbar from "./Navbar"
 
 export default function Header() {
   return (
-    <header className="bg-white border-b border-slate-200 shadow-sm">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <div>
-          <h1 className="text-2xl font-bold text-[#001A5A]">
-            Jess Tech
-          </h1>
+    <header className="bg-[#020817]/95 border-b border-blue-500/20">
+      <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+        <div className="flex items-center gap-4">
+          <div className="text-3xl font-black text-white">
+            JT
+          </div>
 
-          <p className="text-sm text-slate-500">
-            Développement web & assistance technique
-          </p>
+          <div>
+            <h1 className="text-xl font-bold text-white">
+              JESS <span className="text-[#0D5BFF]">TECH</span>
+            </h1>
+
+            <p className="text-xs text-slate-300">
+              Développement web & assistante technique
+            </p>
+          </div>
         </div>
 
         <Navbar />

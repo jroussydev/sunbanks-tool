@@ -12,7 +12,7 @@ import Dashboard from "./pages/admin/Dashboard.tsx"
 
 function App() {
   return (
-    <div className="min-h-screen bg-slate-100 text-slate-800">
+    <div className="min-h-screen bg-[#020817] text-white">
       <Header />
 
       <Routes>
