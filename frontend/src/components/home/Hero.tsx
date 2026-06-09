@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden px-6 py-24">
+    <section className="relative overflow-hidden px-6 py-20">
 
       {/* Design Halo lumiere */}
       <div className="absolute inset-0">

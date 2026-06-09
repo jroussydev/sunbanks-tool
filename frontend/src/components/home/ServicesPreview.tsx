@@ -28,7 +28,7 @@ export default function ServicesPreview() {
   ]
 
   return (
-    <section className="bg-white px-6 py-24">
+    <section className="bg-white px-6 py-14">
       <div className="grid gap-8 lg:grid-cols-[20%_75%]">
         <div className="mb-14 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
