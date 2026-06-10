@@ -2,32 +2,109 @@ import { Link } from "react-router-dom"
 
 export default function PortfolioPreview() {
   return (
-    <section className="px-6 py-20">
-      <div className="max-w-7xl mx-auto">
-        <div className="rounded-3xl bg-[#001A5A] px-8 py-16 text-white shadow-2xl md:px-16">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-blue-300">
-            Réalisations
-          </p>
+    <section className="bg-white px-6 py-20">
+  <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[30%_70%]">
+{/* Bloc de gauche */}
+    <div className="self-center">
+      <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-[#0D5BFF]">
+        Réalisations
+      </p>
 
-          <h2 className="text-3xl md:text-4xl font-bold leading-tight">
-            Découvrez les projets réalisés pour mes clients
-          </h2>
+      <h2 className="text-4xl font-black text-[#001A5A]">
+        Des projets concrets,
+        des résultats utiles
+      </h2>
 
-          <p className="mt-6 max-w-3xl text-slate-200 leading-8 text-lg">
-            Une sélection de réalisations sera présentée ici afin de découvrir
-            des exemples concrets de projets web menés pour différents besoins
-            et activités.
-          </p>
+      <p className="mt-4 leading-7 text-slate-600">
+        Découvrez prochainement une sélection
+        de sites et projets réalisés pour des clients
+        de différents secteurs.
+      </p>
 
-          <div className="mt-10">
-            <Link
-              to="/realisations"
-              className="inline-block rounded-full bg-white px-6 py-3 font-semibold text-[#001A5A] transition duration-300 hover:-translate-y-1 hover:shadow-xl"
-            >
-              Voir les réalisations
-            </Link>
-          </div>
+      <button
+        className="
+          mt-8
+          rounded-xl
+          border
+          border-[#0D5BFF]
+          px-6
+          py-3
+          font-semibold
+          text-[#0D5BFF]
+          transition
+          hover:bg-[#0D5BFF]
+          hover:text-white
+        "
+      >
+        Voir les réalisations →
+      </button>
+    </div>
+{/* Bloc de droite */}
+    <div
+      className="
+        rounded-3xl
+        bg-gradient-to-r
+        from-[#081120]
+        to-[#0b1d35]
+        p-10
+        text-white
+      "
+      >
+        <div className="grid items-center gap-10 lg:grid-cols-2">
+
+  {/* Maquette 
+  <img
+  src="/images/mairie-preview.webp"
+  alt="Site mairie"
+  />
+*/}
+<div className="rounded-2xl border border-blue-400/30 bg-gradient-to-br from-[#0b1730] to-[#123c8a]/60 p-4 shadow-[0_0_35px_rgba(13,91,255,0.25)]">
+  <div className="mb-4 flex gap-2">
+  <div className="h-3 w-3 rounded-full bg-slate-300" />
+  <div className="h-3 w-3 rounded-full bg-slate-300" />
+  <div className="h-3 w-3 rounded-full bg-slate-300" />
+</div>
+
+  <div className="rounded-xl border border-blue-300/20 bg-blue-500/20 p-5">
+    <div className="h-20 rounded-lg bg-blue-400/25" />
+
+    <div className="mt-5 space-y-2">
+      <div className="h-3 w-5/6 rounded bg-blue-100/60" />
+      <div className="h-3 w-full rounded bg-blue-100/30" />
+      <div className="h-3 w-2/3 rounded bg-blue-100/30" />
+    </div>
+
+    <div className="mt-5 grid grid-cols-3 gap-3">
+      <div className="h-10 rounded-lg bg-blue-300/20" />
+      <div className="h-10 rounded-lg bg-blue-300/20" />
+      <div className="h-10 rounded-lg bg-blue-300/20" />
+    </div>
+  </div>
+</div>
+<div>
+
+  <h3 className="text-4xl font-bold">
+    Les premières réalisations arrivent bientôt.
+  </h3>
+
+  <p className="mt-4 text-slate-300">
+    Chaque projet est unique et pensé
+    sur mesure selon vos objectifs.
+  </p>
+
+  <div className="mt-8 flex flex-wrap gap-8 text-sm">
+
+    <span>✓ Design soigné</span>
+
+    <span>✓ Code propre</span>
+
+    <span>✓ Optimisé</span>
+
+  </div>
+
+</div>
         </div>
+      </div>
       </div>
     </section>
   )

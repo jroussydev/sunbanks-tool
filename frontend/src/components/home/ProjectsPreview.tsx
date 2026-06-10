@@ -31,7 +31,7 @@ export default function ProjectsPreview() {
             Outils internes, expérimentations et développements qui illustrent
             mon travail quotidien de développeuse.
           </p>
-          <button className="mt-8 rounded-xl bg-[#0D5BFF] px-6 py-3 font-semibold text-white transition hover:bg-blue-700">
+          <button className="mt-10 rounded-xl bg-[#0D5BFF] px-6 py-3 font-semibold text-white transition hover:bg-blue-700">
             Voir tous les projets →
           </button>
         </div>
@@ -48,7 +48,7 @@ export default function ProjectsPreview() {
 {/* Bloc droite */}
         <div className="grid gap-8 lg:grid-cols-[70%_30%]">
 
-  {/* Bloc secondaire Projets */}
+{/* Bloc secondaire Projets */}
         <div className="space-y-4">
           {projects.map((project) => (
             <article
