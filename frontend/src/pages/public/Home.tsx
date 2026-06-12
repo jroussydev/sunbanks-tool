@@ -16,7 +16,7 @@ export default function Home() {
             <ContactCTA />
 
 
-            <section>
+            {/* <section>
                 <img src="/public/logo.png" alt="Logo Jess Tech" />
                 <h1>Jess Tech</h1>
                 <h2>Création de sites web et assistance technique</h2>
@@ -80,7 +80,7 @@ export default function Home() {
                     Vous pouvez me contacter pour une demande d'information, de devis, une refonte ou un besoin d'accompagnement technique.
                 </p>
                 <a href="mailto:contact@jesstech.fr">contact@jesstech.fr</a>
-            </section>
+            </section> */}
         </main>
     )
 }
