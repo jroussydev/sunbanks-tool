@@ -1,3 +1,5 @@
+import Logo from "./Logo";
+
 export default function Footer() {
   return (
     <footer className="bg-[#020617] border-t border-slate-200 mt-16 text-slate-300">
@@ -8,8 +10,8 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           {/* Bloc Jess tech */}
           <div className="">
-            <div>
-              Logo
+            <div className="flex items-center gap-2">
+              < Logo/>
               Jess Tech
             </div>
             <div>

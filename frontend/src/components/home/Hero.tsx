@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 
+
 export default function Hero() {
   return (
     <section className="relative overflow-hidden px-6 py-20">

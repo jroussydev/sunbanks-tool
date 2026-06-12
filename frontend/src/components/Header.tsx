@@ -1,4 +1,5 @@
 import Navbar from "./Navbar"
+import Logo from "../components/Logo";
 
 export default function Header() {
   return (
@@ -6,7 +7,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <div className="text-3xl font-black text-white">
-            JT
+            <Logo />
           </div>
 
           <div>
