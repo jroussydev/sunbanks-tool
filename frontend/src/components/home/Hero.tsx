@@ -10,7 +10,7 @@ export default function Hero() {
         <div className="absolute left-1/2 top-1/2 h-[260px] w-[260px] -translate-y-1/2 rounded-full bg-blue-500/10 blur-[90px] md:h-[400px] md:w-[400px] md:blur-[120px]" />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 mx-auto max-w-[1500px] px-4 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <div>
             <span className="inline-flex rounded-full border border-blue-500/30 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-blue-400 sm:text-sm">
