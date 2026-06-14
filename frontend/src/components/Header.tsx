@@ -4,10 +4,10 @@ import Logo from "./Logo";
 export default function Header() {
   return (
     <header className="bg-[#020817]/95 border-b border-blue-500/20">
-      <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+      <div className="mx-auto max-w-[1500px] px-4 sm:px-6 lg:px-8 py-5 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <div className="text-3xl font-black text-white">
-            <Logo className="h-16"/>
+            <Logo className="h-14 lg:h-16" />
           </div>
 
           <div>
