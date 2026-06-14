@@ -15,9 +15,10 @@ export default function ProjectsPreview() {
   ]
 
   return (
-    <section className="px-6 py-20">
+<section className="py-16 md:py-20 lg:py-24">
 {/* Bloc de section en 3 parties */}
-      <div className="mx-auto max-w-7xl grid gap-8 lg:grid-cols-[25%_5%_70%]">
+  <div className="mx-auto max-w-[1500px] px-4 sm:px-6 lg:px-8">
+    <div className="grid gap-8 lg:grid-cols-[25%_5%_70%]">
 
 {/* Bloc gauche */}
         <div className="self-start pt-6">
@@ -55,9 +56,12 @@ export default function ProjectsPreview() {
             key={project.title}
             className="
               group
-              flex
-              items-center
-              justify-between
+flex
+flex-col
+gap-4
+sm:flex-row
+sm:items-center
+sm:justify-between
               rounded-2xl
               border
               border-blue-500/15
@@ -109,6 +113,7 @@ export default function ProjectsPreview() {
           </span>
           </div>
         </div>    
+      </div>
       </div>
     </section>
   )
