@@ -1,14 +1,17 @@
 import { Link } from "react-router-dom"
 
+
 export default function Hero() {
   return (
     <section className="relative overflow-hidden py-16 md:py-20 lg:py-24">
-      {/* Design Halo lumière */}
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-1/3 top-0 h-full w-72 bg-blue-600/20 blur-[100px] md:w-96 md:blur-[120px]" />
-        <div className="absolute left-1/3 top-1/2 h-[320px] w-[320px] -translate-y-1/2 rounded-full bg-blue-600/10 blur-[100px] md:h-[600px] md:w-[600px] md:blur-[140px]" />
-        <div className="absolute left-1/2 top-1/2 h-[260px] w-[260px] -translate-y-1/2 rounded-full bg-blue-500/10 blur-[90px] md:h-[400px] md:w-[400px] md:blur-[120px]" />
-      </div>
+
+<img
+  src="/decorations/vagueLumineuse.png"
+  alt=""
+  aria-hidden="true"
+  className="hidden
+    lg:block pointer-events-none absolute -top-5 left-[30%] hidden h-[1080px] w-auto lg:block"
+/>
 
       <div className="relative z-10 mx-auto max-w-[1500px] px-4 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
@@ -93,7 +96,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="rounded-3xl border border-blue-500/20 bg-slate-950/80 p-6 shadow-2xl backdrop-blur sm:p-8 lg:justify-self-end lg:w-full lg:max-w-xl">
+          <div className="rounded-3xl border border-blue-500/20 bg-slate-950/80 p-6 shadow-[0_0_50px_rgba(13,91,255,0.18)] backdrop-blur sm:p-8 lg:justify-self-end lg:w-full lg:max-w-xl">
             <div className="space-y-6">
               <div>
                 <p className="text-sm uppercase tracking-wider text-blue-400">

@@ -15,10 +15,13 @@ export default function ProjectsPreview() {
   ]
 
   return (
-<section className="py-16 md:py-20 lg:py-24">
+<section className="relative overflow-hidden py-16 md:py-20 lg:py-24">
+
+
+
 {/* Bloc de section en 3 parties */}
-  <div className="mx-auto max-w-[1500px] px-4 sm:px-6 lg:px-8">
-    <div className="grid gap-8 lg:grid-cols-[25%_5%_70%]">
+  <div className="relative z-10 mx-auto max-w-[1500px] px-4 sm:px-6 lg:px-8">
+    <div className="grid gap-28 lg:grid-cols-[25%_75%]">
 
 {/* Bloc gauche */}
         <div className="self-start pt-6">
@@ -37,14 +40,34 @@ export default function ProjectsPreview() {
           </button>
         </div>
 
-{/* Design ligne bleu */}
+{/* Design ligne bleu 
         <div className="hidden lg:flex flex-col items-center py-8">
           <div className="h-3 w-3 rounded-full bg-blue-500 shadow-[0_0_16px_#0D5BFF]" />
           <div className="w-px flex-1 bg-blue-500/40" />
           <div className="h-3 w-3 rounded-full bg-blue-500 shadow-[0_0_16px_#0D5BFF]" />
           <div className="w-px flex-1 bg-blue-500/40" />
           <div className="h-3 w-3 rounded-full bg-blue-500 shadow-[0_0_16px_#0D5BFF]" />
-        </div>
+        </div>*/}
+{/* Vague bleu */}
+{/* Design ligne bleu */}
+  <img
+    src="/decorations/vagueLumineuse2.png"
+  alt=""
+  aria-hidden="true"
+  className="
+    hidden
+    lg:block
+    absolute
+    left-[13%]
+    top-1/2
+    -translate-y-1/2
+    h-[900px]
+    w-auto
+    opacity-80
+    -z-10
+    pointer-events-none
+  "
+  />
 
 {/* Bloc droite */}
         <div className="grid gap-8 lg:grid-cols-[70%_30%]">
@@ -96,6 +119,8 @@ sm:justify-between
 {/* Design image */}
         <div
         className="
+        hidden
+    lg:block
           flex
           h-full
           items-center

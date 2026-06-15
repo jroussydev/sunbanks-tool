@@ -4,7 +4,28 @@ export default function ContactCTA() {
   return (
     <section className="bg-white pb-16 md:pb-20 lg:pb-24">
       <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl border border-blue-500/15 bg-gradient-to-r from-[#081120] to-[#0b1d35] p-6 sm:p-8">
+        <div className="relative overflow-hidden rounded-3xl border border-blue-500/15 bg-gradient-to-r from-[#081120] to-[#0b1d35] p-6 sm:p-8">
+          
+{/* Design ligne bleu */}
+  <img
+    src="/decorations/vagueLumineuse.png"
+  alt=""
+  aria-hidden="true"
+  className="
+hidden
+    lg:block
+
+    absolute
+    left-[13%]
+    top-1/2
+    -translate-y-1/2
+    h-[900px]
+    w-auto
+    opacity-80
+    pointer-events-none
+  "
+  />
+
           <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
             <div className="flex items-center gap-5">
               <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-blue-500/20 text-2xl text-blue-400 sm:h-16 sm:w-16 sm:text-3xl">
@@ -20,6 +41,9 @@ export default function ContactCTA() {
                   Discutons-en simplement.
                 </p>
               </div>
+
+
+
             </div>
 
             <Link
