@@ -7,6 +7,41 @@ import {
   ShieldCheck,
 } from "../../icons";
 
+const steps = [
+  {
+    number: "01",
+    icon: MessageCircle,
+    title: "Prise de contact",
+    text: "Vous expliquez la situation ou les modifications souhaitées.",
+  },
+  {
+    number: "02",
+    icon: Search,
+    title: "Analyse du besoin",
+    text: "Une vérification permet de comprendre le problème ou la demande.",
+  },
+    {
+    number: "03",
+    icon: Lightbulb,
+    title: "Proposition de solution",
+    text: "Les possibilités sont étudiées pour proposer une intervention adaptée.",
+  },
+  {
+    number: "04",
+    icon: Code2,
+    title: "Réalisation",
+    text: "ULes corrections, mises à jour ou évolutions sont réalisées.",
+  },
+    {
+    number: "05",
+    icon: ShieldCheck,
+    title: "Vérification",
+    text: "Les modifications sont vérifiées afin de s'assurer du bon fonctionnement.",
+  },
+
+];
+
+
 export default function MaintenanceSiteWeb() {
   return (
     <main className="relative overflow-hidden">
@@ -163,36 +198,37 @@ export default function MaintenanceSiteWeb() {
     </div>
 
     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-5">
-      {[
-        ["01", "💬", "Prise de contact", "Vous expliquez la situation ou les modifications souhaitées."],
-        ["02", "🔍", "Analyse du besoin", "Une vérification permet de comprendre le problème ou la demande."],
-        ["03", "💡", "Proposition de solution", "Les possibilités sont étudiées pour proposer une intervention adaptée."],
-        ["04", "🛠️", "Réalisation", "Les corrections, mises à jour ou évolutions sont réalisées."],
-        ["05", "🛡️", "Vérification", "Les modifications sont vérifiées afin de s'assurer du bon fonctionnement."],
-      ].map(([number, icon, title, text], index) => (
-        <article key={number} className="relative text-center">
+{steps.map((step, index) => {
+  const Icon = step.icon;
+
+  return (
+        <article key={step.number} className="relative text-center">
           {/* Ligne entre les étapes desktop */}
           {index < 4 && (
             <div className="absolute left-1/2 top-8 hidden h-px w-full bg-blue-500/40 lg:block" />
           )}
 
           <div className="relative z-10 mx-auto flex h-16 w-16 items-center justify-center rounded-full border border-blue-500/50 bg-[#081120] text-xl font-black text-white shadow-[0_0_20px_rgba(13,91,255,0.35)]">
-            {number}
+            {step.number}
           </div>
 <div className="mx-auto hidden h-10 w-px bg-blue-500/40 lg:block" />
-          <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl border border-blue-500/20 bg-blue-500/10 text-2xl">
-            {icon}
-          </div>
+<div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl border border-blue-500/20 bg-blue-500/10">
+  <Icon
+    className="h-7 w-7 text-blue-400"
+    strokeWidth={1.8}
+  />
+</div>
 
           <h3 className="mt-6 text-xl font-bold text-white">
-            {title}
+            {step.title}
           </h3>
 
           <p className="mt-3 text-sm leading-6 text-slate-400">
-            {text}
+            {step.text}
           </p>
         </article>
-      ))}
+  );
+})}
     </div>
   </div>
 </section>
