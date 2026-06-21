@@ -142,48 +142,53 @@ export default function MaintenanceSiteWeb() {
           </div>
         </div>
       </section>
-{/* Section déroulement */}
-      <section className="py-16 md:py-20 lg:py-24">
-        <div className="mx-auto max-w-[1500px] px-4 sm:px-6 lg:px-8">
-          <div className="mb-16">
-            <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-blue-400">
-              Déroulement
-            </p>
+{/* Section - Déroulement horizontal */}
+<section className="py-16 md:py-20 lg:py-24">
+  <div className="mx-auto max-w-[1500px] px-4 sm:px-6 lg:px-8">
+    <div className="mb-14">
+      <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-blue-400">
+        Déroulement
+      </p>
 
-            <h2 className="text-3xl font-black text-white sm:text-4xl">
-              Comment se déroule une intervention ?
-            </h2>
+      <h2 className="text-3xl font-black text-white sm:text-4xl">
+        Comment se déroule une intervention ?
+      </h2>
+    </div>
+
+    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-5">
+      {[
+        ["01", "💬", "Prise de contact", "Vous expliquez la situation ou les modifications souhaitées."],
+        ["02", "🔍", "Analyse du besoin", "Une vérification permet de comprendre le problème ou la demande."],
+        ["03", "💡", "Proposition de solution", "Les possibilités sont étudiées pour proposer une intervention adaptée."],
+        ["04", "🛠️", "Réalisation", "Les corrections, mises à jour ou évolutions sont réalisées."],
+        ["05", "🛡️", "Vérification", "Les modifications sont vérifiées afin de s'assurer du bon fonctionnement."],
+      ].map(([number, icon, title, text], index) => (
+        <article key={number} className="relative text-center">
+          {/* Ligne entre les étapes desktop */}
+          {index < 4 && (
+            <div className="absolute left-1/2 top-8 hidden h-px w-full bg-blue-500/40 lg:block" />
+          )}
+
+          <div className="relative z-10 mx-auto flex h-16 w-16 items-center justify-center rounded-full border border-blue-500/50 bg-[#081120] text-xl font-black text-white shadow-[0_0_20px_rgba(13,91,255,0.35)]">
+            {number}
           </div>
 
-<div className="relative mx-auto max-w-4xl">
-  <div className="absolute left-6 top-0 h-full w-px bg-blue-500/30" />
+          <div className="mx-auto mt-6 flex h-14 w-14 items-center justify-center rounded-2xl border border-blue-500/20 bg-blue-500/10 text-2xl">
+            {icon}
+          </div>
 
-  {[
-    ["01", "Prise de contact", "Vous expliquez la situation ou les modifications souhaitées."],
-    ["02", "Analyse du besoin", "Une vérification permet de comprendre le problème ou la demande."],
-    ["03", "Proposition de solution", "Les possibilités sont étudiées pour proposer une intervention adaptée."],
-    ["04", "Réalisation", "Les corrections, mises à jour ou évolutions sont réalisées."],
-    ["05", "Vérification", "Les modifications sont vérifiées afin de s'assurer du bon fonctionnement."],
-  ].map(([number, title, text]) => (
-    <article key={number} className="relative mb-8 pl-16">
-      <div className="absolute left-0 top-1 flex h-12 w-12 items-center justify-center rounded-full border border-blue-500/30 bg-[#081120] text-sm font-bold text-blue-400 shadow-[0_0_18px_rgba(13,91,255,0.25)]">
-        {number}
-      </div>
+          <h3 className="mt-6 text-xl font-bold text-white">
+            {title}
+          </h3>
 
-      <div className="rounded-2xl border border-blue-500/15 bg-[#081120] p-6">
-        <h3 className="text-xl font-bold text-white">
-          {title}
-        </h3>
-
-        <p className="mt-3 text-slate-400">
-          {text}
-        </p>
-      </div>
-    </article>
-  ))}
-</div>
-        </div>
-      </section>
+          <p className="mt-3 text-sm leading-6 text-slate-400">
+            {text}
+          </p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
 
 
 {/* Section FAQ */}
