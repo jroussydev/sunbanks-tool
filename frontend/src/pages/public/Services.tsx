@@ -18,7 +18,7 @@ export default function Services() {
       title: "Maintenance de site web",
       description:
         "Mises à jour, corrections, petites évolutions et suivi technique de votre site.",
-        link: "/Maintenance",
+        link: "/MaintenanceSiteWeb",
     },
     {
       title: "Assistance technique",
