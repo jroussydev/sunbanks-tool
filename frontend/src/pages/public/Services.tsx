@@ -12,7 +12,7 @@ export default function Services() {
       title: "Développement web sur mesure",
       description:
         "Développement de fonctionnalités spécifiques selon les besoins de votre projet.",
-        link: "/DeveloppementSurMesure",
+        link: "/DeveloppementWebSurMesure",
     },
     {
       title: "Maintenance de site web",
