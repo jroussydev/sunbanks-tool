@@ -99,7 +99,7 @@ const sections = [
 
   {
     icon: Database,
-    title: "4. Tarifs et paiement",
+    title: "5. Tarifs et paiement",
     content: (
       <>
         <p>
@@ -124,7 +124,7 @@ const sections = [
 
   {
     icon: Clock,
-    title: "5. Délais de réalisation",
+    title: "6. Délais de réalisation",
     content: (
       <>
         <p>
@@ -141,7 +141,7 @@ const sections = [
 
   {
     icon: Users,
-    title: "6. Obligations du client",
+    title: "7. Obligations du client",
     content: (
       <>
         <p>
@@ -160,7 +160,7 @@ const sections = [
 
   {
     icon: Database,
-    title: "7. Communication et suivi",
+    title: "8. Communication et suivi",
     content: (
       <>
         <p>
@@ -178,7 +178,7 @@ const sections = [
 
   {
     icon: Pencil,
-    title: "8. Validation et modifications",
+    title: "9. Validation et modifications",
     content: (
       <>
         <p>
@@ -198,7 +198,7 @@ const sections = [
 
   {
     icon: Shield,
-    title: "9. Livraison et garantie",
+    title: "10. Livraison et garantie",
     content: (
       <>
         <p>
@@ -218,7 +218,7 @@ const sections = [
 
   {
     icon: Database,
-    title: "10. Maintenance",
+    title: "11. Maintenance",
     content: (
       <>
         <p>
@@ -236,7 +236,7 @@ const sections = [
 
   {
     icon: Database,
-    title: "11. Hébergement et nom de domaine",
+    title: "12. Hébergement et nom de domaine",
     content: (
       <>
         <p>
@@ -256,7 +256,7 @@ const sections = [
 
   {
     icon: Database,
-    title: "12. Sauvegarde des fichiers",
+    title: "13. Sauvegarde des fichiers",
     content: (
       <>
         <p>
@@ -272,7 +272,7 @@ const sections = [
 
   {
     icon: FileText,
-    title: "13. Présentation des réalisations",
+    title: "14. Présentation des réalisations",
     content: (
       <>
         <p>
@@ -296,7 +296,7 @@ const sections = [
 
   {
     icon: Clock,
-    title: "14. Suspension ou abandon du projet",
+    title: "15. Suspension ou abandon du projet",
     content: (
       <>
         <p>
@@ -312,7 +312,7 @@ const sections = [
 
   {
     icon: Shield,
-    title: "15. Responsabilité",
+    title: "16. Responsabilité",
     content: (
       <>
         <p>
@@ -328,7 +328,7 @@ const sections = [
 
   {
     icon: Users,
-    title: "16. Résolution amiable",
+    title: "17. Résolution amiable",
     content: (
       <>
         <p>
@@ -341,7 +341,7 @@ const sections = [
 
   {
     icon: Shield,
-    title: "17. Droit applicable",
+    title: "18. Droit applicable",
     content: (
       <>
         <p>
@@ -356,7 +356,7 @@ const sections = [
 
   {
     icon: Mail,
-    title: "18. Contact",
+    title: "19. Contact",
     content: (
       <>
         <p><strong>Jess Tech</strong></p>
